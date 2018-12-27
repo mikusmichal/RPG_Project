@@ -1,18 +1,20 @@
 import random
 
+
 class Player:
-    strength = 1
-    perception = 1
-    endurance = 1
-    charisma = 1
-    intelligence = 1
-    agility = 1
-    luck = 1
-    health = 1
-    weapon = ''
-    x = 0
-    y = 0
-    location = (x, y)
+    def __init__(self, weapon, x, y):
+        self.strength = random.randint(1, 2)
+        self.perception = random.randint(1, 2)
+        self.endurance = random.randint(1, 2)
+        self.charisma = random.randint(1, 2)
+        self.intelligence = random.randint(1, 2)
+        self.agility = random.randint(1, 2)
+        self.luck = random.randint(1, 2)
+        self.x = x
+        self.y = y
+        self.location = (x, y)
+        self.health = 10 + 2*self.endurance
+        self.weapon = weapon
 
     def view_stats(self):
         print("S:" + str(self.strength))
@@ -22,12 +24,6 @@ class Player:
         print("I:" + str(self.intelligence))
         print("A:" + str(self.agility))
         print("L:" + str(self.luck))
+        print("HP:" + str(self.health))
 
-    def setup_stats(self):
-        self.strength = 1 + random.randint(0, 2)
-        self.perception = 1 + random.randint(0, 2)
-        self.endurance = 1 + random.randint(0, 2)
-        self.charisma = 1 + random.randint(0, 2)
-        self.intelligence = 1 + random.randint(0, 2)
-        self.agility = 1 + random.randint(0, 2)
-        self.luck = 1 + random.randint(0, 1)
+

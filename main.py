@@ -1,6 +1,6 @@
 from player import Player
 from actions import MoveNorthAction, MoveSouthAction, MoveEastAction, MoveWestAction, ShowStats
-from stuff import clear_screen, spawn
+from stuff import clear_screen, create_radroach
 
 if __name__ == "__main__":
 
@@ -11,9 +11,8 @@ if __name__ == "__main__":
         MoveWestAction(),
         ShowStats
     ]
-    player = Player()
-    player.setup_stats()
-    spawn(name='radroach')
+    player = Player(weapon='', x=0, y=0)
+    create_radroach(name='radroach')
     winning = False
 
     while not winning:

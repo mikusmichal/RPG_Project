@@ -12,7 +12,7 @@ class ShowStats:
     name = 'mystats'
 
     def perform(self, player: Player):
-        Player.view_stats(player)
+        player.view_stats()
 
 
 class MoveNorthAction(Action):

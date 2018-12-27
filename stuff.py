@@ -7,7 +7,6 @@ def clear_screen():
     os.system('cls')
 
 
-def spawn(name):
-    x = NPC()
+def create_radroach(name):
+    x = NPC(strength=1, perception=0, endurance=2, charisma=1, intelligence=1, agility=1, luck=0, weapon='')
     x.name = name
-    x.setup_name()
