@@ -8,10 +8,10 @@ class Action:
         pass
 
 
-class ShowStats:
+class ShowStats(Action):
     name = 'mystats'
 
-    def perform(self, player: Player):
+    def perform(self, player: Player, location):
         player.view_stats()
 
 

@@ -9,7 +9,7 @@ if __name__ == "__main__":
         MoveSouthAction(),
         MoveEastAction(),
         MoveWestAction(),
-        ShowStats
+        ShowStats()
     ]
     player = Player(weapon='', x=0, y=0)
     create_radroach(name='radroach')
